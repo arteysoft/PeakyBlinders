@@ -1,0 +1,19 @@
+Descubrir los numeros primos
+( los números primos son aquellos que SOLO son divisibles por si mismo o por 1 )
+( No tienen otra raices que sean 1 y si mismo)
+
+Para descubrir los numeros primos ? se debe:
+
+arrancar de un numero primo conocido: 3 y verificar si es divisible por numeros primos mas bajos
+en el caso de 3 solo existe el 2.
+
+3 % 2 === 0 Dado que es distinto de 0 NO es divisible => 3 es primo
+4 % 2 === 0 Dado que es igual a 0 es divisible => 4 NO es primo
+21 % 2 === 1 NO, no es divisible
+21 % 3 === 0 es disivible, NO es primo
+
+Que cosas necesito para hacer este ejercicio.
+
+ciclo for, una funcion o 2 funciones, el operador de % (modulo o resto)
+vamos a necesitar un array para almacenar los numeros primos.
+
