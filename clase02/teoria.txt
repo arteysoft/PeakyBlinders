@@ -1,0 +1,46 @@
+Los lenguajes son abstracciones de el codigo de maquina.
+
+Abstraccion sincronica
+----------------------
+
+let contenidoArchivo = file.read('/archivo');
+
+Esto se traduce en lenguaje de mas bajo nivel (pseudocodigo)
+
+int manejador = readFile('/archivo') // Manejador va a tener un id
+string buffer = null;
+int otroManejador = cargarBuffer(manejador, buffer)
+while (hasta que el manejador este en modo buffer cargado) {
+   Ahi retorna el control al lenguaje de mas alto nivel ****************
+}
+
+1) Primero se carga el contenido de archivo1
+2) Luego se carga el contenido de archivo2
+
+Abstraccion asincronicas (javascript)
+-------------------------------------
+
+file.read('/archivo', (buffer) => {
+   console.log('el buffer esta cargado')
+})
+
+file.read('/otroArchivo', (buffer) => {
+   console.log('el buffer esta cargado')
+})
+
+1) el primer file read
+2) el segundo file read
+3) puede ser el callback de la primera o segunda funcion
+4) puede ser el callback de la primera o segunda funcion
+
+
+/** Que cosas asincrónicas existen ?
+ * 
+ * IO Archivos
+ * Lectura de Teclado, escritura en la consola
+ * IO red
+ * SetTimeout
+ * IO Mongo, MySQL
+ * 
+ */
+
