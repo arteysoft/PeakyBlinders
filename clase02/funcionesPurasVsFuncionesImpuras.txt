@@ -1,0 +1,41 @@
+Funciones puras
+
+Son aquellas que dado un input determinado lease 2, 'hola', {nombre:'Jordi'}
+Siempre va a retornar exactamente el mismo output 
+
+Ejemplo esDivisible(4,2) -> true
+
+(5, 2) -> false
+
+Objetivo: Reutilizacion, facilidad para la composicion
+          Testeabilidad - Facil de testear
+
+Funciones inpuras
+
+Dado un determinado input, no se puede precisar el output
+
+Porque.
+
+Modifica alguna estructura externa,
+Usa Random
+Usa Fecha
+Usa IO
+Etc.
+
+
+Una cosa mas acerca de las funciones puras
+
+suma(2, 4) -> 6
+suma(2, 4) -> 6
+suma(2, 4) -> 6
+suma(3, 3) -> 6
+suma(-3, 9) -> 6
+
+Puede haber infinitos inputs para el mismo output
+
+
+
+
+
+
+
