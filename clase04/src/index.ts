@@ -8,6 +8,8 @@ switch (process.argv[2]) {
         crearArchivosEnFormaRecursiva()
         // generarArchivo()
         break
+    case 'teoriapromise':
+        break
     case 'discoverNumerosPrimos':
         break
     case 'probar':
