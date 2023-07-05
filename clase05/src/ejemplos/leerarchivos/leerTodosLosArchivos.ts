@@ -31,7 +31,18 @@ export let mision1 = async () => {
     // 1) Leer toda la carpeta y mostrar por pantalla
     // 2) for de todo el array que me retorna y borrar cada uno de los archivos
     // 3) subir a mongodb cada uno de los archivos
-
-    console.log('Trabajen aca...')
+    
+    try {
+        let resultado = await readdir(directorio)
+        resultado = Array.from(resultado)
+        for (let unArchivo of resultado) {
+            let nombreCompleto = [directorio, unArchivo].join('/')
+            console.log(nombreCompleto)
+            await unlink(nombreCompleto)
+            // Un ejercicio mas: hacer una promise que solo espere un segundo: await esperar()
+        }
+    } catch (error) {
+        console.log(error)
+    }
 }
 
