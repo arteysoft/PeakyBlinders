@@ -1,0 +1,10 @@
+CREATE TABLE `peakyblinders`.`collatz` (
+   `numero` BIGINT NOT NULL ,
+   `ciclos` BIGINT NOT NULL ,
+   `mayor_ciclo` BIGINT NOT NULL ,
+    PRIMARY KEY (`numero`)
+) ENGINE = InnoDB;
+
+
+
+select * from collatz order by ciclos desc limit 10;
