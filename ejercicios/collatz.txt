@@ -1,0 +1,19 @@
+Conjetura de collatz
+
+
+Dado un valor n entero positivo
+
+--------------------------------------------------------
+si es par ? se divide por dos
+si es impar se aplica la siguiente formula   (3 * n) + 1
+--------------------------------------------------------
+   Itera infinitamente y siempre les va dar 1
+   que como es impar le aplico la formula me da 4
+   que como es par [4, 2, 1]
+
+
+Conjetura de collatz o bien 3n+1
+
+let resolver3nMas1 = n => {
+   
+}
