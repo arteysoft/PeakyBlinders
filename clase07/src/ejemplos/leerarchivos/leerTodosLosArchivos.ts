@@ -1,5 +1,5 @@
 const fs = require('fs');
-import { unlink, readdir } from 'node:fs/promises';
+import { unlink, readdir, readFile } from 'node:fs/promises';
 const directorio = '/var/peakyblinders';
 
 let crearPromise = () => {
@@ -46,3 +46,28 @@ export let mision1 = async () => {
     }
 }
 
+export let recorrerDirectorioConCallBack = async (enCadaContenidoCB) => {
+    try {
+        let resultado = await readdir(directorio)
+        resultado = Array.from(resultado)
+        for (let unArchivo of resultado) {
+            let nombreCompleto = [directorio, unArchivo].join('/')
+            let contenido = await readFile(nombreCompleto, 'utf-8')
+            await enCadaContenidoCB(JSON.parse(contenido))
+            await unlink(nombreCompleto)
+            // Un ejercicio mas: hacer una promise que solo espere un segundo: await esperar()
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+/*
+Cuando nosotros tenemos una funcion la podemos invocar desde varios lugares y asi promover la 
+reutilizacion (Eso lo tenemos claro todos)
+
+Que pasa si la funcion, como en este caso, quiero que por cada archivo insertar en mongo
+y en SQL. Como promuevo la reutilizacion.
+
+YO NO QUIERO tener un recorrer archivos para mySQL y otro para mongo.
+*/

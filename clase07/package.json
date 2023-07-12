@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "faker": "^5.5.3",
+    "mongodb": "^5.7.0",
     "mysql2": "^3.5.1",
     "uuid": "^9.0.0"
   },

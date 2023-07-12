@@ -3,10 +3,11 @@ import crearArchivosEnFormaRecursiva from './ejemplos/generar1000Archivos/recurs
 import {generarArchivo} from './ejemplos/generar1000Archivos/asyncforloop'
 import {asyncForLoop} from './lib/asyncForLoop'
 import {ejemploPromise1} from './ejemplos/ejemplosPromise/ejemploPromise1'
-import leerTodosLosArchivos, {mision1} from './ejemplos/leerarchivos/leerTodosLosArchivos'
+import leerTodosLosArchivos, {mision1, recorrerDirectorioConCallBack} from './ejemplos/leerarchivos/leerTodosLosArchivos'
 import {conjeturaDeCollatz} from './ejercicios/carlosYoel'
+import {levantarArchivosAMySQL} from './ejemplos/levantarArchivosAMySQL'
+import {levantarArchivosAMyMongoDB} from './ejemplos/levantarArchivosAMongoDB'
 
-console.log(process.argv)
 switch (process.argv[2]) {
     case 'creararchivos':
         // crearArchivosEnFormaRecursiva()
@@ -27,7 +28,11 @@ switch (process.argv[2]) {
         break
     case 'cliente':
         break
-    case 'levantararchivos':
+    case 'levantararchivosmysql':
+        levantarArchivosAMySQL()
+        break
+    case 'levantararchivosmongodb':
+        levantarArchivosAMyMongoDB()
         break
     case 'collatz':
         conjeturaDeCollatz()
