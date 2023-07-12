@@ -12,7 +12,7 @@ function crearObjetoFake():Usuario {
         country: faker.address.country(),
         accountName: faker.finance.accountName(),
         account: faker.finance.account(),
-        amount: faker.finance.amount()
+        amount: parseFloat(faker.finance.amount())
     }
 }
 

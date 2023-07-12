@@ -7,9 +7,11 @@ const fs = require('fs');
 const directorio = '/var/peakyblinders';
 
 export let generarArchivo = () => {
-    asyncForLoop(100, (elemento, next, onFinish) => {
-        let z = genUsuario()
+    asyncForLoop(1000, (elemento, next, onFinish) => {
+        let z:Usuario = genUsuario()
         let jsonData  = JSON.stringify(z);
+
+        console.log(z)
     
         console.log(['generando archivo: ', elemento])
         fs.writeFile(directorio +'/'+ z.id + '.json', jsonData, (err) => {
