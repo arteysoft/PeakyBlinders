@@ -1,0 +1,32 @@
+HTTP
+
+Capas de comunicacion de red
+
+1) Fisica
+2) Enlance
+3) IP (Routers)
+4) TCP Protocolo de ordenamiento de paquetes y control
+   El orden sirve para aquellas aplicaciones que necesitan de un orden.
+   Excluir todo lo que es tiempo real. Voz/ip prefiero descartar paquetes y no ordenarlos
+5) HTTP
+
+   Prtocolo basado en ASCII https://elcodigoascii.com.ar/
+   
+   4 verbos basicos
+
+   GET /alumno HTTP 1.1
+   
+   Especificacion de los verbos HTTP para api REST
+   https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional
+
+   GET /alumno/ec6f9331-da5b-4add-be3a-e7933b3b3f20 (buscar un determinado objeto)
+   GET /alumno?nombre=sebas&city=chicago&pais=jamaica (query string)
+ 
+   POST /alumno
+   Enviar tipicamente un json al server para pedirle que agregue este alumno (body)
+
+   PUT /alumno/ec6f9331-da5b-4add-be3a-e7933b3b3f20
+   Enviar tipicamente un json al server para pedirle que modifique este alumno (body)
+
+   DELETE /alumno/ec6f9331-da5b-4add-be3a-e7933b3b3f20
+   
