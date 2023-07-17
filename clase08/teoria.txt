@@ -20,13 +20,44 @@ Capas de comunicacion de red
    https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional
 
    GET /alumno/ec6f9331-da5b-4add-be3a-e7933b3b3f20 (buscar un determinado objeto)
+   Si lo encuentra ? 200 y el alumno encontrado en formato json
+   si NO lo encuentra 404 NOT FOUND
+
    GET /alumno?nombre=sebas&city=chicago&pais=jamaica (query string)
+   Si encuentra coincidencias ? 200 Las envia en formato JSON
+   Si NO encuentra coincidencias [] array vacio en formato json
  
    POST /alumno
    Enviar tipicamente un json al server para pedirle que agregue este alumno (body)
+   Si es exitoso 201 created   
+
 
    PUT /alumno/ec6f9331-da5b-4add-be3a-e7933b3b3f20
    Enviar tipicamente un json al server para pedirle que modifique este alumno (body)
 
    DELETE /alumno/ec6f9331-da5b-4add-be3a-e7933b3b3f20
    
+
+   Para ver todos los codigos de retorno HTTP visitar CHAT GPT
+
+   200 OK: Esta respuesta indica que la solicitud se ha procesado correctamente. Es el código de estado más común y significa que la solicitud fue exitosa.
+
+404 Not Found: Este código se muestra cuando el recurso solicitado no se encuentra en el servidor. Puede deberse a una URL incorrecta o a que el recurso ha sido eliminado o movido.
+
+500 Internal Server Error: Indica que ha ocurrido un error interno en el servidor al procesar la solicitud. Este código puede deberse a un problema en el código del servidor, falta de recursos o cualquier otro error que impida que el servidor maneje la solicitud correctamente.
+
+403 Forbidden: Este código se muestra cuando el servidor rechaza la solicitud debido a la falta de permisos. Indica que el recurso solicitado está prohibido para el cliente.
+
+301 Moved Permanently: Este código se utiliza para redirigir de manera permanente una URL a otra. Indica que la ubicación del recurso solicitado ha cambiado de forma permanente y el cliente debe actualizar sus marcadores o enlaces.
+
+302 Found: Este código se utiliza para redirigir temporalmente una URL a otra. Indica que la ubicación del recurso solicitado ha cambiado temporalmente y el cliente debe realizar otra solicitud a la nueva ubicación.
+
+401 Unauthorized: Este código se muestra cuando se requiere autenticación para acceder al recurso solicitado. Indica que el cliente no ha proporcionado las credenciales de autenticación adecuadas o que las credenciales proporcionadas no son válidas.
+
+Estos son solo algunos de los códigos de estado HTTP más comunes, pero hay muchos más que se utilizan para diferentes situaciones. Cada código proporciona información sobre el estado de la solicitud y ayuda a los navegadores y aplicaciones a tomar las acciones apropiadas.
+   
+
+
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
+
