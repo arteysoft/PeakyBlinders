@@ -1,5 +1,6 @@
 import express from 'express'
 import genUsuario from '../lib/genusuario'
+import {insertOne} from '../lib/mongoDriver'
 
 export default () => {
 
@@ -23,7 +24,13 @@ export default () => {
     app.post('/alumno', (request, response) => {
         // insertar en mongodb
         console.log(request.body)
-        response.status(201).send()
+        insertOne('clase8', request.body)
+            .then(() => {
+                response.status(201).send()
+            })
+            .catch(() => {
+                response.status(500).send()
+            })
     })
 
     app.listen(3000)
