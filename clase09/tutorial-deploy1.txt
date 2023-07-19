@@ -1,0 +1,29 @@
+Tutorial deploy 1
+
+https://www.digitalocean.com/
+
+Vamos a droplets
+
+ssh-keygen pongo un nombre
+
+copio la clave publica al servidor
+
+ssh -i /todalaruta/peaky root@178.128.236.83
+
+descargar https://nodejs.org/dist/v18.17.0/node-v18.17.0-linux-x64.tar.xz
+a traves del comando wget
+
+wget https://nodejs.org/dist/v18.17.0/node-v18.17.0-linux-x64.tar.xz
+
+tar xvf node-v18.17.0-linux-x64.tar.xz
+
+mv node-v18.17.0-linux-x64 /opt
+
+nano .bashrc
+
+export PATH=$PATH:/opt/node-v18.17.0-linux-x64/bin
+
+salgo de la sesion y vuelvo a ingresar
+
+
+
