@@ -1,4 +1,4 @@
-// import 'dotenv/config'
+import 'dotenv/config'
 import crearArchivosEnFormaRecursiva from './ejemplos/generar1000Archivos/recursivo'
 import {generarArchivo} from './ejemplos/generar1000Archivos/asyncforloop'
 import {asyncForLoop} from './lib/asyncForLoop'

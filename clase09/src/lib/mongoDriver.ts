@@ -1,7 +1,10 @@
 import {MongoClient} from 'mongodb'
 
-const url = 'mongodb://0.0.0.0:27017'
-const NOMBRE_BASE_DE_DATOS = 'peakyBlinders'
+console.log(process.env.NOMBRE_BASE_DE_DATOS_MONGO)
+console.log(process.env.URL_MONGO)
+
+const url:any = process.env.URL_MONGO
+const NOMBRE_BASE_DE_DATOS = process.env.NOMBRE_BASE_DE_DATOS_MONGO
 const CANTIDAD_LIMITE_OBJETOS_RESPUESTA = 1000
 
 export let insertOne = async (nombreColeccion, documento) => {

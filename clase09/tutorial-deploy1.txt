@@ -25,5 +25,10 @@ export PATH=$PATH:/opt/node-v18.17.0-linux-x64/bin
 
 salgo de la sesion y vuelvo a ingresar
 
+git clone --depth=1 https://github.com/arteysoft/PeakyBlinders.git
+
+Ahora lo mismo de siempre, npm install, npm install -g typescript
+
+node build/index.js servidorsito 4000
 
 
