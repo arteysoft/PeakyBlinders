@@ -7,8 +7,8 @@ export default () => {
 
     id UUID
     nombreUsuario: 
-    passwordEncriptada:
-    salt: ya vamos a ver que es, le ponen holamundo
+    passwordEncriptada: sha2
+    salt: ya vamos a ver que es, le ponen holamundo - Emabrrador de cancha
 
     van a agregar su nombre, y sunombre carlos1234
 
