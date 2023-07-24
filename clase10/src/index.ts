@@ -11,6 +11,7 @@ import server from './appserver/server'
 import servidorsito from './appserver/servidorsito'
 import notaciondepunto from './ejemplos/notaciondepunto'
 import generar1000AlumnosMongo from './ejemplos/generar1000AlumnosMongo'
+import agregarUsuarioPassword from './ejemplos/agregarUsuarioPassword'
 
 switch (process.argv[2]) {
     case 'creararchivos':
@@ -55,6 +56,9 @@ switch (process.argv[2]) {
         break
     case 'generar1000AlumnosMongo':
         generar1000AlumnosMongo()
+        break
+    case 'crearusuario':
+        agregarUsuarioPassword()
         break
     default:
         console.log('Atencion, se debe enviar un parametro con la accion a seguir')
