@@ -1,0 +1,4 @@
+PasswordEnClear + SALT =     PasswordCifrada
+
+sha256(hola + 'alskdjlaisjdlaisjdlaisjdlasdasdkajsdlaksjdlaksjdladkjaslkdj') = 
+
