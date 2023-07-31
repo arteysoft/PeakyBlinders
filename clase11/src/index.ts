@@ -12,6 +12,7 @@ import servidorsito from './appserver/servidorsito'
 import notaciondepunto from './ejemplos/notaciondepunto'
 import generar1000AlumnosMongo from './ejemplos/generar1000AlumnosMongo'
 import crearusuario, {validarUsuario} from './ejemplos/crearusuario'
+import { crearjwt, verificarjwt } from './ejemplos/crearjwt'
 
 switch (process.argv[2]) {
     case 'creararchivos':
@@ -27,7 +28,11 @@ switch (process.argv[2]) {
         break
     case 'discoverNumerosPrimos':
         break
-    case 'probar':
+    case 'crearjwt':  // CLASE 12
+        crearjwt()
+        break
+    case 'verificarjwt': // CLASE 12
+        verificarjwt()
         break
     case 'server':
         server()
