@@ -23,13 +23,26 @@ export let validarUsuario = async (usuario, password) => {
 
 export default () => {
     // crear un usuario
-    let salt = [uuid(), uuid()].join('')
-    let passwordEncriptada = sha256(['max33RedBull', salt].join(''))
+    {
+        let salt = [uuid(), uuid()].join('')
+        let passwordEncriptada = sha256(['max33RedBull', salt].join(''))
 
-    let documento = {
-        usuario: 'max',
-        passwordEncriptada,
-        salt
+        let documento = {
+            usuario: 'max',
+            passwordEncriptada,
+            salt
+        }
+        insertOne('usuarios', documento)
     }
-    insertOne('usuarios', documento)
+    {
+        let salt = [uuid(), uuid()].join('')
+        let passwordEncriptada = sha256(['camilo2015', salt].join(''))
+
+        let documento = {
+            usuario: 'lionel',
+            passwordEncriptada,
+            salt
+        }
+        insertOne('usuarios', documento)
+    }
 }
