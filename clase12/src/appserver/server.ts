@@ -9,6 +9,7 @@ export default () => {
     let app = express()
 
     app.use(express.json())
+    app.use(express.static('public'));
     app.use('/login', loginRouter)
     app.use('/', autenticarMiddleware)
     app.use('/alumno', alumnoRouter)

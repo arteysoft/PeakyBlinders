@@ -27,5 +27,9 @@ export default express.Router()
             return
         }
         response.status(401).send()
+    })
+    .post('/refresh', async (request, response) => {
+        // ACA LO QUE HAY QUE VALIDAR ES EL REFRESH TOKEN Y LUEGO TODO EL MECANISMO NUEVAMENTE
+        response.status(401).send()
     })    
 

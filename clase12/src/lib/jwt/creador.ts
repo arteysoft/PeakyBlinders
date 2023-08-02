@@ -1,7 +1,7 @@
 import {SECRETO, hora} from './commons'
 import jwt from 'jsonwebtoken'
 
-export let crearJWT = (idUsuario, usuario) => {
+let crearJWTParametrizable = (idUsuario, usuario, segundos) => {
     let payload = {
         sub: idUsuario,
         name: usuario,
@@ -17,5 +17,13 @@ export let crearJWT = (idUsuario, usuario) => {
     console.log('')
     console.log(token)
     return token
+}
+
+export let crearJWT = (idUsuario, usuario) => {
+    crearJWTParametrizable(idUsuario, usuario, 60)
+}
+
+export let refreshToken = (idUsuario, usuario) => {
+    crearJWTParametrizable(idUsuario, usuario, 3600)
 }
 
