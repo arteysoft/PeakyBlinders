@@ -1,0 +1,34 @@
+Para una correcta utilizacion (NO USAR CASI NUNCA LA PASSWORD)
+
+enviar usuario y passowrd (ya esta hecho)
+recibir un token y un refresh_token
+
+el token va a tener como expiracion 60 segundos
+
+el refresh_token expira a las 24 horas
+
+
+voy a tener un endpoint /login 
+                        /refresh_token
+
+en /login
+
+{
+   usuario: ''
+   password
+}
+
+en /refresh_token
+
+{
+   refresh_token:
+}
+
+
+Dato de color:
+
+El refresh_token, cuando lo utilizo para obtener un nuevo token, tiene un rol (una autorizacion) muchas veces menor
+que la que tiene con usuario y password
+
+
+
