@@ -1,0 +1,62 @@
+Como hacer deploy y distribucion de carga
+
+con pwd sabemos en que carpeta estamos posicionados
+
+Si tenemos una copia de node en nuestra maquina local ?
+
+scp -i peaky node-v18.17.0-linux-x64.tar.xz  root@157.230.100.182:/root/descargas
+
+la otra forma es
+
+wget https://nodejs.org/dist/v18.17.0/node-v18.17.0-linux-x64.tar.xz
+
+tar xvf forma1.tar.xz
+
+mv node-v18.17.0-linux-x64 /opt
+
+como poner en el path a node para que lo pueda llamar desde cualquier carpeta
+
+editar el archivo /root/.bashrc con el editor nano
+
+cd [enter] voy a mi home que es donde esta el archivito .bashrc
+
+nano .bashrc
+
+me copio esta ruta: /opt/node-v18.17.0-linux-x64/bin/
+
+export path=$PATH:/opt/node-v18.17.0-linux-x64/bin/
+
+salgo de la session y vuelvo a entrar
+
+git clone --depth=1 https://github.com/arteysoft/PeakyBlinders.git
+esto me clona solo el ultimo commit, por eso la profundidad de 1
+
+en la carpeta de la clase 13 tiro el comando
+
+npm install -g typescript
+tsc para compilar el deploy
+node ./build/index.js servidorsito 4001 > archivo4001 2> err.txt &
+
+
+Como instalar y configurar el haproxy (load bolancer)
+
+apt update
+
+apt install haproxy
+
+systemctl stop haproxy.service parar el servicio de haproxy
+
+scp -i peaky haproxy.cfg root@157.230.100.182:/etc/haproxy
+
+nano /etc/haproxy/haproxy.cfg -> para configurarlo
+
+systemctl start haproxy.service
+
+
+
+
+
+
+
+
+
