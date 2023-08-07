@@ -14,6 +14,7 @@ import generar1000AlumnosMongo from './ejemplos/generar1000AlumnosMongo'
 import crearusuario, {validarUsuario} from './ejemplos/crearusuario'
 import { crearjwt, verificarjwt } from './ejemplos/crearjwt'
 import { crearJWT } from './lib/jwt/creador'
+import ejemplolog from './ejemplolog'
 
 switch (process.argv[2]) {
     case 'creararchivos':
@@ -50,7 +51,8 @@ switch (process.argv[2]) {
     case 'collatz':
         conjeturaDeCollatz()
         break
-    case 'pruebamongo':
+    case 'ejemplolog':
+        ejemplolog()
         break
     case 'pruebapasswords':        
         break
