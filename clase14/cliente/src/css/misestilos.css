@@ -1,0 +1,6 @@
+.cajaEstilo1 {
+    height: 200px;
+    width: 100px;
+    display: flex;
+    background-color: blueviolet;
+}
