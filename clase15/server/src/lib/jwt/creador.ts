@@ -20,7 +20,7 @@ let crearJWTParametrizable = (idUsuario, usuario, segundos) => {
 }
 
 export let crearJWT = (idUsuario, usuario) => {
-    crearJWTParametrizable(idUsuario, usuario, 60)
+    return crearJWTParametrizable(idUsuario, usuario, 60)
 }
 
 export let refreshToken = (idUsuario, usuario) => {

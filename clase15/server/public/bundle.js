@@ -110,13 +110,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/controllers/controladores.js":
+/*!******************************************!*\
+  !*** ./src/controllers/controladores.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nlet hacerLogin = (usuario, password, onFinish) => {\r\n    const postData = {\r\n        usuario,\r\n        password\r\n      }\r\n      \r\n      fetch('/login', {\r\n        method: 'POST',\r\n        headers: {\r\n          'Content-Type': 'application/json'\r\n        },\r\n        body: JSON.stringify(postData)\r\n      })\r\n        .then(response => response.json())\r\n        .then(data => {\r\n          console.log('Post created:', data);\r\n          onFinish(data)\r\n        })\r\n        .catch(error => {\r\n          console.error('Error creating post:', error);\r\n        });\r\n      \r\n}\r\n\r\nlet initControllers = () => {\r\n    document.getElementById('frmLogin').addEventListener('submit', e => {\r\n        e.preventDefault()\r\n        let usuario = document.getElementById('txtUsuario').value\r\n        let password = document.getElementById('txtPassword').value\r\n        hacerLogin(usuario, password, (data) => {\r\n            console.log(data)\r\n            localStorage.setItem('token', data.token)\r\n        })\r\n    })\r\n}\r\n\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initControllers);\n\n//# sourceURL=webpack://proyecto-inicial-cliente/./src/controllers/controladores.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_crearPantalla1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/crearPantalla1 */ \"./src/lib/crearPantalla1.js\");\n/* harmony import */ var _css_misestilos_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/misestilos.css */ \"./src/css/misestilos.css\");\n\r\n\r\n\r\nlet hwrecursivo = () => {\r\n    console.log(\"hello world!\");\r\n    console.log(new Date())\r\n    setTimeout(hwrecursivo, 2000)\r\n    console.log('------------------------------------')\r\n}\r\n\r\nhwrecursivo()\r\n;(0,_lib_crearPantalla1__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\r\n\r\n\n\n//# sourceURL=webpack://proyecto-inicial-cliente/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_crearPantalla1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/crearPantalla1 */ \"./src/lib/crearPantalla1.js\");\n/* harmony import */ var _css_misestilos_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/misestilos.css */ \"./src/css/misestilos.css\");\n/* harmony import */ var _controllers_controladores__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controllers/controladores */ \"./src/controllers/controladores.js\");\n\r\n\r\n\r\n\r\nlet hwrecursivo = () => {\r\n    console.log(\"hello world!\");\r\n    console.log(new Date())\r\n    setTimeout(hwrecursivo, 2000)\r\n    console.log('------------------------------------')\r\n}\r\n\r\n\r\n;(0,_lib_crearPantalla1__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\r\n;(0,_controllers_controladores__WEBPACK_IMPORTED_MODULE_2__[\"default\"])()\r\n\r\n\n\n//# sourceURL=webpack://proyecto-inicial-cliente/./src/index.js?");
 
 /***/ }),
 
@@ -126,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {\r\n    console.log('desde la lib 1')\r\n\r\n    document.getElementById('frmLogin').addEventListener('submit', e => {\r\n        alert('hola mundo!!!')\r\n        alert('chau mundo!!!')\r\n        e.preventDefault();\r\n    })\r\n});\n\n//# sourceURL=webpack://proyecto-inicial-cliente/./src/lib/crearPantalla1.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {\r\n    \r\n\r\n    \r\n});\n\n//# sourceURL=webpack://proyecto-inicial-cliente/./src/lib/crearPantalla1.js?");
 
 /***/ })
 
