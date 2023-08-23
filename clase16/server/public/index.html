@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Empty project</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="app">
+            <div class="cajaEstilo1"></div>
+            <div id="cajaLogin">
+                <form id="frmLogin">
+                    <label>Usuario: </label>
+                    <input id="txtUsuario" type="text">
+                    <label>password: </label>
+                    <input id="txtPassword" type="text">
+                    <input type="submit" value="ENVIAR">
+                </form>
+            </div>
+            <hr />
+            <input type="button" id="btnVerAlumno" value="VER ALUMNO" />
+        </div>
+        <div id="display"></div>
+        <script src="bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.2.1/mustache.js"></script>
+
+        <script id="tmplAlumno" type="template/html">
+            <h1>{{lastName}}</h1>
+            <h1>{{firstName}}</h1>
+            <h1>{{country}}</h1>
+        </script>
+
+    </body>
+</html>
