@@ -1,6 +1,6 @@
 import crearPantalla1 from "./lib/crearPantalla1";
 import './css/misestilos.css'
-import initControllers from "./controllers/controladores";
+import initControllers, {mostrarAlumnos} from "./controllers/controladores";
 import './apiproxy/proxy'
 
 let hwrecursivo = () => {
@@ -13,3 +13,4 @@ let hwrecursivo = () => {
 
 crearPantalla1()
 initControllers()
+mostrarAlumnos()

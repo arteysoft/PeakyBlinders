@@ -38,31 +38,21 @@ let initControllers = () => {
     })
 
     document.getElementById('btnVerAlumno').addEventListener('click', async e => {
-        let arrAlu = []
-        for (let idx = 0; idx < 10; idx++) {
-            let nuevoAlu = await inventarAlumnoAsync()
-            arrAlu.push(nuevoAlu)            
-        }
-        console.log(arrAlu)
-
-        // 1) Levantar el template de la tabla de alumnos en una variable
-        // 2) Utilizar mustache para renderizar la tabla de alumnos
-        // 3) Insertar en display el resultado de aver renderizado con Mustache.
-
-        let txtOutput = Mustache.render('{{#rep}}<h1>{{x}}</h1>{{/rep}}', {rep: [{x:1}, {x:2}, {x:3}, {x:4}]})
-        document.getElementById('display').innerHTML = txtOutput;
+        await mostrarAlumnos()        
     })
 }
 
-/*
-Para clase 16:
-
-Traerme varios alumnos, 10 ? 
-Hacer una tabla y mostrarla en el DOM.
-Para esto, vamos a utilizar un motor de Renderizado (agarra un template y lo intercala con datos que yo tengo en memoria)
-
-*/
-
-
-
 export default initControllers
+
+export let mostrarAlumnos = async (data) => {
+    let arrAlu = []
+    for (let idx = 0; idx < 10; idx++) {
+        let nuevoAlu = await inventarAlumnoAsync()
+        arrAlu.push(nuevoAlu)            
+    }
+    console.log(arrAlu)
+
+    let template = document.getElementById("tmplTabAlumno").innerHTML
+    let txtOutPut = Mustache.render(template, {rep: arrAlu})
+    document.getElementById('display').innerHTML = txtOutPut;
+}
