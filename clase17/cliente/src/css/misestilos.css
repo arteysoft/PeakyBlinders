@@ -1,0 +1,12 @@
+.cajaEstilo1 {
+    height: 200px;
+    width: 100px;
+    display: flex;
+    background-color: blueviolet;
+}
+
+.headerTabAlumno {
+    height: 100px;
+    border: solid 1px black;
+    font-size: large;
+}
