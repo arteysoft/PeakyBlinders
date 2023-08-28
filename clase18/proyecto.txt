@@ -1,0 +1,63 @@
+
+Broker de mensajeria. Que es ?
+
+Es un intermediario donde yo voy a enviar todos los mensajes que quiera enviar para un
+determinado destinatario. Pero siempre voy a hacerlo a traves del broker.
+
+Ventajas son multiples, cuento con un medidaror que se puede escalar
+                        registro de logging de todo
+                        si todo se cae ? el medidaor trabaja con un sql
+                        store and forward, si el servicio destino NO esta disponible, lo guarda y lo envia cuando el distino este disponible.
+                  
+
+
+Que tiene que tener el message broker
+
+Un express para interfacear con todo el mundo
+
+CUANTOS PORTS ?
+
+Dada la naturaleza asincronica de node ? podria tener un port para todos los clientes ?
+
+Si yo tengo un port para todos los clientes ? los mismos, deberian registrarse y cada uno tener su express.
+
+
+[ B R O K E R ]
+
+Express 
+/registrarme
+  {
+     nombre_completo. ms.evaluador_compra
+     donde_estoy: IP:PORT     
+  }
+/enviarmensaje
+   {
+      id,
+      fecha: 123153515651
+      origen: origen,
+      destino: nombre,      
+      payload: {
+         a, b, c, d, e, d.
+      }
+   }
+   INSERTA EN SQL ? y da un numero de tracking
+   
+
+Pensemos que mas alla que en un principio todo sea local, deberia tener IP:PORT
+
+Cuando el broker se libera ? va a leer que cosas tiene para repartir y actualiza
+el repo SQL/MONGO
+
+Logging
+
+
+
+
+
+
+
+
+
+
+
+
