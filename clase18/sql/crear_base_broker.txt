@@ -1,0 +1,13 @@
+CREATE DATABASE peakybroker
+
+CREATE TABLE `peakybroker`.`mensajes` (
+    `id` VARCHAR(36) NOT NULL PRIMARY KEY,
+    `ts` INT NOT NULL,
+    `origen` VARCHAR(128) NOT NULL,
+    `destino` VARCHAR(128) NOT NULL,
+    `status` INT NOT NULL,
+    `payload` JSON NOT NULL)
+ENGINE = InnoDB;
+
+
+
