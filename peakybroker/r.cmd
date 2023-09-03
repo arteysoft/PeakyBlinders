@@ -1,0 +1,1 @@
+ts-node-dev.cmd ./src/index.ts
