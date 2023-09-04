@@ -4,7 +4,8 @@ import { crearLog } from './peakybrokerdriver/logger'
 
 let logger = crearLog('index.ts')
 
-logger.info('Levantando broker')
+logger.info('Levantando analizador de precios')
+logger.info('port: ' + process.env.PORT)
 
 global.mapaMircoservicios = {}
 
@@ -19,6 +20,3 @@ global.mapaMircoservicios['com.peakyblinders.evaluadorprecios'] = {
 }
 
 server()
-
-
-
