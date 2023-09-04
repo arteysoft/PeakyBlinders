@@ -1,6 +1,7 @@
 import {http} from 'follow-redirects'
 
 export let enviarMensaje = async (mensaje) => {
+    console.log('por enviar mensaje', mensaje)
     return await postRequestPromise('/enviarmensaje', mensaje)  
 }
 
@@ -34,7 +35,7 @@ export let postRequestPromise = (url, postData) => {
       });
     });
     
-    req.write(postData);    
+    req.write(postData);
     req.end();
   }) 
 }
