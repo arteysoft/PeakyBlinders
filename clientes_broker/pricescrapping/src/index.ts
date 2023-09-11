@@ -37,7 +37,7 @@ let informarPrecio = async (activo) => {
             )
         
         let strMensajeJSON = JSON.stringify(mensaje)
-        enviarMensaje(strMensajeJSON)
+        // enviarMensaje(strMensajeJSON)
         logger.info(JSON.parse(strMensajeJSON))
         logger.info(objPrecios)
     }

@@ -5,7 +5,7 @@ export let enviarMensaje = async (mensaje) => {
     return await postRequestPromise('/enviarmensaje', mensaje)  
 }
 
-export let postRequestPromise = (url, postData) => {
+export let postRequestPromise = (url, postData, noreject = true) => {
   return new Promise((resolve, reject) => {
     var options = {
       'method': 'POST',
@@ -31,7 +31,10 @@ export let postRequestPromise = (url, postData) => {
       });
     
       res.on("error", function (error) {
-        reject(error);
+        if (noreject) {
+          return
+        }
+        reject(error)
       });
     });
     
